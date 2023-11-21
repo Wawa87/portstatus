@@ -29,8 +29,8 @@ class PortstatusApplicationTests {
 	@Test
 	void testPortCheckerTCPTest() {
 		PortChecker p = PortCheckerFactory.create("127.0.0.1");
-		Assert.isTrue(p.checkTCPPort(51198), "Test known open TCP port 8080");
-		Assert.isTrue(!p.checkTCPPort(50984), "Test known unavailable TCP port 53");
+		Assert.isTrue(p.checkTCPPort(5040), "Test known open TCP port 5040");
+		Assert.isTrue(!p.checkTCPPort(8080), "Test known unavailable TCP port 8080");
 	}
 
 	@Test
