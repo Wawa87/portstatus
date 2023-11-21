@@ -22,7 +22,8 @@ public class PortChecker {
                 udp.close();
                 return true;
             }
-        } catch (SocketException e) {
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
         return false;
     }
@@ -35,7 +36,8 @@ public class PortChecker {
                 tcp.close();
                 return true;
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
         return false;
     }

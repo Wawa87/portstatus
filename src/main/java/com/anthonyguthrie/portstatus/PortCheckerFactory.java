@@ -10,7 +10,7 @@ public class PortCheckerFactory {
             byte[] byteAddress = new byte[4];
             List<String> strings = Arrays.asList(ipv4Address.split("\\."));
             for (int x = 0; x < 4; x++) {
-                byteAddress[x] = Byte.valueOf(strings.get(x));
+                byteAddress[x] = ((byte) Integer.parseInt(strings.get(x)));
             }
             Inet4Address inet4Address = (Inet4Address) Inet4Address.getByAddress(byteAddress);
             return new PortChecker(inet4Address);
